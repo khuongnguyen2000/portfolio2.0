@@ -2,6 +2,7 @@
 	"name": "phuongthao",
 	"private": true,
 	"version": "1.0.0",
+	"homepage": "http://khuongnguyen2000.github.io/portfolio2.0",
 	"scripts": {
 		"predeploy": "npm run build",
     	"deploy": "gh-pages -d dist",
