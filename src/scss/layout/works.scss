@@ -1,0 +1,263 @@
+@keyframes float-text {
+	0% {
+		left: -0%;
+	}
+
+	50% {
+		left: -100%;
+	}
+
+	100% {
+		left: -0%;
+	}
+}
+
+.works {
+	width: 100%;
+	height: auto;
+	padding: 0 2vw;
+	position: relative;
+
+	@include media('<phone') {
+		padding: 0 4vw;
+	}
+
+	&__title {
+		@extend %sectionTitle;
+	}
+
+	&__infos {
+		width: 60%;
+		line-height: 1.2;
+		font-size: 2rem;
+		font-weight: 300;
+		color: #000;
+		margin: 5rem 2rem 5rem;
+
+		div {
+			overflow: hidden;
+		}
+
+		@include media('<phone') {
+			width: 100%;
+			font-size: 1.75rem;
+			margin: 5rem 0;
+		}
+	}
+
+	&__content {
+		padding: 8rem 12vw;
+
+		@include media('<phone') {
+			width: 100%;
+			font-size: 1.75rem;
+			margin: 5rem 0;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		margin: 12rem 0;
+		width: 70%;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+
+			.hover-reveal {
+				width: 23vw;
+				height: 55vh;
+			}
+
+			@include media('<phone') {
+				.hover-reveal {
+					width: 36vw;
+					height: 32vh;
+				}
+			}
+		}
+
+		&:nth-child(even) {
+			margin-left: auto;
+		}
+
+		@include media('<phone') {
+			margin: 10rem 0;
+			width: 90%;
+		}
+	}
+
+	&__heading {
+		position: relative;
+	}
+
+	&__heading-text {
+		font-family: 'Orelo';
+		font-size: 6vw;
+
+		text-align: left;
+		text-transform: uppercase;
+		color: #fe3301;
+		font-weight: 300;
+		overflow: hidden;
+		mix-blend-mode: multiply;
+
+		overflow: hidden;
+		position: relative;
+
+		@include media('<phone') {
+			font-size: 11vw;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__heading-top,
+	&__heading-bottom {
+		span:first-child {
+			font-family: 'Neue Montreal';
+			font-weight: 300;
+			font-size: 3vw;
+			font-style: italic;
+
+			@include media('<phone') {
+				font-size: 6vw;
+			}
+		}
+	}
+
+	&__heading-bottom {
+		position: absolute;
+		top: 0;
+	}
+
+	&__banner {
+		position: absolute;
+		top: 2rem;
+		left: -1rem;
+		transform: rotate(-27.5deg);
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 1rem;
+		background: #000;
+		color: #fff;
+		width: 8rem;
+		height: 1rem;
+		overflow: hidden;
+
+		div {
+			white-space: nowrap;
+			position: absolute;
+			animation: float-text 30s linear infinite;
+		}
+
+		@include media('<tablet') {
+			width: 6rem;
+			height: 1rem;
+			top: 1rem;
+			left: -0.5rem;
+		}
+
+		@include media('<phone') {
+			transform: rotate(0deg) !important;
+			left: 0;
+			top: initial;
+			bottom: 0.5rem;
+		}
+	}
+
+	&__description {
+		line-height: 1.4;
+		font-size: 1.5rem;
+		font-weight: 300;
+		color: #000;
+		padding: 1rem 0;
+		z-index: -1;
+		display: flex;
+		flex-direction: column;
+
+		div:first-child {
+			color: #8b8b8b;
+			padding-right: 2rem;
+		}
+
+		@include media('<tablet') {
+			font-size: 1.375rem;
+		}
+
+		@include media('<phone') {
+			font-size: 1.25rem;
+		}
+	}
+
+	&__sub {
+		position: absolute;
+		font-weight: 400;
+		text-transform: uppercase;
+		font-size: 5vw;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+
+		-webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: #000;
+
+		bottom: 0;
+		right: 2vw;
+		transform: rotate(180deg);
+
+		span {
+			-webkit-text-stroke-color: #fe3301;
+		}
+
+		@include media('<tablet') {
+			-webkit-text-stroke-width: 1.5px;
+		}
+
+		@include media('<phone') {
+			font-size: 7vw;
+			-webkit-text-stroke-width: 1px;
+		}
+	}
+
+	.hover-reveal {
+		position: absolute;
+		z-index: -1;
+		width: 33vw;
+		height: 35vh;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+
+		@include media('<tablet') {
+			width: 45vw;
+			height: 30vh;
+		}
+
+		&__inner {
+			overflow: hidden;
+		}
+
+		&__inner,
+		&__img {
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		&__img {
+			background-size: cover;
+			background-position: 50% 50%;
+			border: 7px solid white;
+			transform: scale(0);
+		}
+	}
+}

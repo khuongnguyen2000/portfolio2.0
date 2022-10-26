@@ -1,0 +1,39 @@
+{
+	"name": "phuongthao",
+	"private": true,
+	"version": "1.0.0",
+	"scripts": {
+		"predeploy": "npm run build",
+    	"deploy": "gh-pages -d dist",
+		"dev": "vite",
+		"preview": "vite preview",
+		"build": "vite build"
+	},
+	"devDependencies": {
+		"sass": "^1.49.8",
+		"vite": "^2.9.15"
+	},
+	"dependencies": {
+		"@waaark/luge": "^0.6.9-beta",
+		"dayjs": "^1.11.1",
+		"event-emitter": "^0.3.5",
+		"gh-pages": "^4.0.0",
+		"gl-matrix": "^3.4.3",
+		"glsl-noise": "^0.0.0",
+		"glsl-rotate": "^1.1.0",
+		"glslify": "^7.1.1",
+		"gsap": "^3.9.1",
+		"include-media": "^1.4.10",
+		"react": "^18.2.0",
+		"split-type": "^0.2.5",
+		"stats.js": "^0.17.0",
+		"three": "^0.138.0",
+		"tweakpane": "^3.0.7",
+		"vite-plugin-glsl": "^0.1.0",
+		"vite-plugin-glslify": "^2.0.1"
+	},
+	"engines": {
+		"npm": "8.x",
+		"node": "16.x"
+	}
+}
